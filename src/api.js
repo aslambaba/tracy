@@ -60,7 +60,7 @@ router.post('/questions', (req, res) => {
   connection.query(sql, values, (err, result) => {
     if (err) {
       console.error(err);
-      res.status(500).send('Error adding question');
+      res.status(500).send(err);
     } else {
       res.status(201).send('Question added successfully');
     }
