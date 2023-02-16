@@ -90,4 +90,6 @@ router.post('/check-answer/:questionId', (req, res) => {
 });
 
 app.use('/.netlify/functions/api', router)
-module.exports.handler = serverless(app)
+
+module.exports = app;
+module.exports.handler = serverless(app);
